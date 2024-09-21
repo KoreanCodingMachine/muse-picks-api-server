@@ -21,7 +21,7 @@ public class AccountRequestDto {
     private String email;
 
     @NotBlank
-    @Pattern(regexp = "Male|Female|Other", message = "Gender must be Male, Female, or Other")
+    @Pattern(regexp = "남|여|기타", message = "Gender must be Male, Female, or Other")
     private String gender;
 
     @NotBlank
