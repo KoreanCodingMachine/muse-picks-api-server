@@ -20,6 +20,7 @@ public class Account {
     private String birthdate;
     private String password;
     private String joined_dt;
+    private String gender;
 
     // account - post
     // 1 대 다 관계 (하나의 계정 - 여러개의 포스트)

@@ -31,7 +31,7 @@ public class Post {
     // post - account
     // 다 대 1 관계 (여러개의 포스트 - 한 명의 계정)
     @ManyToOne
-    @JoinColumn(name = "post_id")
+    @JoinColumn(name = "account_id")
     private Account account;
 
 
