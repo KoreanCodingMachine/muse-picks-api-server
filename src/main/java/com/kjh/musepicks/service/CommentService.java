@@ -10,4 +10,7 @@ public interface CommentService {
     void delete_comment(Long id);
     void update_comment(Long id, String content);
     List<CommentResponseDto> getAll();
+    List<CommentResponseDto> getAllComment();
+    List<CommentResponseDto> getCommentByUserId(Long id);
+
 }

@@ -54,9 +54,29 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public List<CommentResponseDto> getAll() {
-        return commentRepository.findAll()
+        return commentRepository.findAllCommentsWithPost()
                 .stream()
                 .map(CommentResponseDto::of)
                 .toList();
+    }
+
+
+
+    public List<CommentResponseDto> getAllComment() {
+        return commentRepository.findAllCommentsWithAccount()
+                .stream()
+                .map(CommentResponseDto::of)
+                .toList();
+    }
+
+    @Override
+    public List<CommentResponseDto> getCommentByUserId(Long id) {
+
+        List<Comment> comments = commentRepository.findByUserId(id);
+
+        return comments.stream()
+                .map(CommentResponseDto::of)
+                .toList();
+
     }
 }

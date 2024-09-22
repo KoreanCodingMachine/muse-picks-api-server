@@ -42,6 +42,18 @@ public class CommentController {
         return commentService.getAll();
     }
 
+    @Operation(summary = "모든 댓글 조회", description = "모든 댓글을 조회한다.")
+    @GetMapping("/api/comments/account")
+    public List<CommentResponseDto> getAllCommentByAccount() {
+        return commentService.getAllComment();
+    }
+
+    @Operation(summary = "모든 댓글 조회", description = "모든 댓글을 조회한다.")
+    @GetMapping("/api/comments/account/{id}")
+    public List<CommentResponseDto> getAllCommentByAccountById(@PathVariable Long id) {
+        return commentService.getCommentByUserId(id);
+    }
+
     @Operation(summary = "댓글 수정", description = "댓글 id를 받아서 수정한다.")
     @PutMapping("/api/comments/{id}")
     public ApiResponse updateComment(@RequestBody @Valid CommentRequestDto commentRequestDto, @PathVariable Long id) {

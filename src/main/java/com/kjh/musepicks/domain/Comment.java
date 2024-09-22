@@ -17,7 +17,7 @@ public class Comment {
     // 다 대 1 관계 (여러개의 댓글 - 하나의 포스트)
     @ManyToOne
     @JoinColumn (name = "post_id")
-    private Post post;
+    private Post posts;
 
     // comment - account
     // 다 대 1 관계 (여러개의 댓글 - 하나의 계정)

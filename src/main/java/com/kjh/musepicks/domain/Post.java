@@ -24,7 +24,7 @@ public class Post {
 
     // post - comment
     // 1 대 다 관계 (하나의 포스트 - 여러개의 댓글)
-    @OneToMany (mappedBy = "post")
+    @OneToMany (mappedBy = "posts")
     private List<Comment> comments;
 
 
