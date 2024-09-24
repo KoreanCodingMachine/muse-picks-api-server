@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -38,6 +39,8 @@ public class Post {
     // post - reservation
     // 1 대 다 관계 (한 개의 포스트 - 여러 번의 예약)
     @OneToMany (mappedBy = "post")
-    private List<Reservation> reservations;
+    private List<Reservation> reservations = new ArrayList<>();
 
+    @OneToMany (mappedBy = "post")
+    private List<PostCategory> postCategories = new ArrayList<>();
 }

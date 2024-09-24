@@ -9,7 +9,7 @@ import lombok.Setter;
 @Entity
 public class Comment {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String content;
     private String created_dt;
 
