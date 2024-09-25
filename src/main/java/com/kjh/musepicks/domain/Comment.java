@@ -1,5 +1,6 @@
 package com.kjh.musepicks.domain;
 
+import com.kjh.musepicks.domain.common.BaseTime;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Comment {
+public class Comment extends BaseTime {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String content;
