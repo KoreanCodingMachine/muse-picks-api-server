@@ -6,6 +6,7 @@ import com.kjh.musepicks.dto.account.AccountResponseDto;
 import com.kjh.musepicks.repository.AccountRepository;
 import com.kjh.musepicks.service.AccountService;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,9 +14,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class AccountServiceImpl implements AccountService {
-    @Autowired
-    private AccountRepository accountRepository;
+    private final AccountRepository accountRepository;
 
     @Override
     @Transactional

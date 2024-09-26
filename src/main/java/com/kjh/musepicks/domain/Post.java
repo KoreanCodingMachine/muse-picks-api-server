@@ -15,19 +15,18 @@ public class Post {
     private Long id;
     private String title;
     private String location;
-    private long price;
+    private Long price;
     private String start_dt;
-    private long views;
-    private long playtime;
-    private long total_count;
-    private long reserved_count;
+    private Long views;
+    private String playtime;
+    private Long total_count;
+    private Long reserved_count;
     private String description;
 
     // post - comment
     // 1 대 다 관계 (하나의 포스트 - 여러개의 댓글)
     @OneToMany (mappedBy = "posts")
     private List<Comment> comments;
-
 
     // post - account
     // 다 대 1 관계 (여러개의 포스트 - 한 명의 계정)

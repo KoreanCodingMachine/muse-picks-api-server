@@ -12,8 +12,6 @@ public class Comment extends BaseTime {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String content;
-    private String created_dt;
-
     // comment - post
     // 다 대 1 관계 (여러개의 댓글 - 하나의 포스트)
     @ManyToOne

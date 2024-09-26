@@ -18,7 +18,7 @@ public class CommentResponseDto {
         return builder()
                 .id(comment.getId())
                 .content(comment.getContent())
-                .created_dt(comment.getCreated_dt())
+                .created_dt(comment.getCreatedDt().toString())
                 .account_id(comment.getAccount().getId())
                 .build();
     }
